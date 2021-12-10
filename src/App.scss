@@ -5,4 +5,15 @@
   display: grid;
   grid-template-columns: 33% 67%;   
   overflow: hidden;
+
+      @media only screen and (max-width: 600px) {
+        // position: relative;
+        display: block;
+        background-color: green;
+        // max-width: 375px;
+        // max-height: 800px;
+        // height: 100%;
+        // overflow: hidden;
+    }
+
 }

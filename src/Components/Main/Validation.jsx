@@ -7,19 +7,25 @@ export class Validation extends Component {
         super();
         this.state = {
           input: {},
-          errors: {}
+          errors: {},
+          check: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCheck = this.handleCheck.bind(this);
+    }
+
+    handleCheck(event) {
+        this.setState(prevState => ({
+            check: !prevState.check
+          }));
     }
 
     handleChange(event) {
         let input = this.state.input;
         input[event.target.name] = event.target.value;
       
-        this.setState({
-          input
-        });
+        this.setState({input});
     }
 
     handleSubmit(event) {
@@ -40,25 +46,33 @@ export class Validation extends Component {
         let input = this.state.input;
         let errors = {};
         let isValid = true;
-    
+
+
+        if (this.state.check === false) {
+            isValid = false;
+            errors["email"] = "You must accept the terms and conditions";
+        }    
     
         if (!input["email"]) {
           isValid = false;
           errors["email"] = "Email address is required";
         }
-
-        if ((input["email"]).slice((input["email"]).length-3) === ".co") {
-            isValid = false;
-            errors["email"] = "We are not accepting subscriptions from Colombia emails";
-          }
     
         if (typeof input["email"] !== "undefined") {
             
           var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
           if (!pattern.test(input["email"])) {
             isValid = false;
-            errors["email"] = "Please provide a valid e-mail address";
+            errors["email"] = "Please provide a valid e-mail address"
           }
+        }
+
+        if (typeof input["email"] !== "undefined") {
+            
+            if ((input["email"]).slice((input["email"]).length-3) === ".co") {
+                isValid = false;
+                errors["email"] = "We are not accepting subscriptions from Colombia emails";
+            }
         }
     
         this.setState({
@@ -69,6 +83,7 @@ export class Validation extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             
             <div>
@@ -88,6 +103,13 @@ export class Validation extends Component {
                     </div>
                     {/* <input type="submit" value="Submit"/> */}
                 </form>
+                <div className='main__content__checkbox__text1'>
+                        <label className="container">
+                            <input type="checkbox" onChange={this.handleCheck} />
+                            <span className="checkmark"></span>
+                        </label>
+                        I agree to <span className='main__content__checkbox__text2'>terms of service</span>
+                    </div>
             </div>
         )
     }

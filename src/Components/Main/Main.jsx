@@ -14,13 +14,13 @@ export class Main extends Component {
                     <div className='main__content__title'>Subscribe to newsletter</div>
                     <div className='main__content__text'>Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
                     <Validation />
-                    <div className='main__content__checkbox__text1'>
+                    {/* <div className='main__content__checkbox__text1'>
                         <label className="container">
                             <input type="checkbox" />
                             <span className="checkmark"></span>
                         </label>
                         I agree to <span className='main__content__checkbox__text2'>terms of service</span>
-                    </div>
+                    </div> */}
                     <div className='main__content__line'></div>
                     <div className='main__content__icons'>
                         <FaFacebookF className='main__content__icons__icon' />

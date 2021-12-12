@@ -14,10 +14,6 @@ export class Main extends Component {
                     <div className='main__content__title'>Subscribe to newsletter</div>
                     <div className='main__content__text'>Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
                     <Validation />
-                    {/* <div className='main__content__input'>
-                    <input className='main__content__input__box' placeholder='Type your email address here...' />
-                    <HiOutlineArrowNarrowRight className='main__content__input__box__arrow' />
-                    </div> */}
                     <div className='main__content__checkbox__text1'>
                         <label className="container">
                             <input type="checkbox" />

@@ -44,15 +44,20 @@ export class Validation extends Component {
     
         if (!input["email"]) {
           isValid = false;
-          errors["email"] = "Please enter your email Address.";
+          errors["email"] = "Email address is required";
         }
+
+        if ((input["email"]).slice((input["email"]).length-3) === ".co") {
+            isValid = false;
+            errors["email"] = "We are not accepting subscriptions from Colombia emails";
+          }
     
         if (typeof input["email"] !== "undefined") {
             
           var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
           if (!pattern.test(input["email"])) {
             isValid = false;
-            errors["email"] = "Please enter valid email address.";
+            errors["email"] = "Please provide a valid e-mail address";
           }
         }
     

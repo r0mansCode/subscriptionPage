@@ -4,10 +4,20 @@
     margin: auto;
 
     @media only screen and (max-width: 600px) {
-        // background-color: yellow;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        height: 66px;
+        background-color: rgb(255, 255, 255);
+
     }
     
     &__text {
+        @media only screen and (max-width: 600px){
+            // margin-top: auto;
+            // margin-bottom: auto;
+            margin: auto;
+        }
         background-color: rgb(255, 255, 255);
         position: relative;        
         display: inline-flex;

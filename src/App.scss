@@ -5,13 +5,15 @@
   display: grid;
   grid-template-columns: 33% 67%;   
   overflow-x: hidden;
-  min-width: 600px;
-  // z-index: 95;
-  // background-color: white;
 
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 1120px) {
+        grid-template-columns: 370px 1fr;
+
+    }
+
+      @media only screen and (max-width: 600px) {
         display: block;
-        overflow-x: hidden;
+        
     }
 
 }

@@ -92,8 +92,8 @@ export class Validation extends Component {
                                 id="email" />
                                 <HiOutlineArrowNarrowRight  className='main__content__input__box__arrow'
                                                             onClick={this.handleSubmit} />
-                                <div className="text-danger">{this.state.errors.email}</div>
                             </div>
+                            <div className="main__content__input__message">{this.state.errors.email}</div>
                         </form>
                         <div className='main__content__checkbox__text1'>
                             <label className="container">

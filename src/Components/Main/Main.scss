@@ -86,6 +86,7 @@
                     line-height: 24px;
                     color: rgba(106, 112, 123, 1);
                 }
+                
 
                 &__arrow {
                     @media only screen and (max-width: 600px){
@@ -99,6 +100,11 @@
                     margin-left: 92%;
                     color: rgba(106, 112, 123, 1);
                 }
+            }
+
+            &__message {
+                position: absolute;
+                margin-right: 15%;
             }
         }
 

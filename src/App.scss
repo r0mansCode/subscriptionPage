@@ -4,16 +4,14 @@
   height: 100%;
   display: grid;
   grid-template-columns: 33% 67%;   
-  overflow: hidden;
+  overflow-x: hidden;
+  min-width: 600px;
+  // z-index: 95;
+  // background-color: white;
 
-      @media only screen and (max-width: 600px) {
-        // position: relative;
+      @media only screen and (max-width: 800px) {
         display: block;
-        background-color: green;
-        // max-width: 375px;
-        // max-height: 800px;
-        // height: 100%;
-        // overflow: hidden;
+        overflow-x: hidden;
     }
 
 }

@@ -36,8 +36,16 @@
             font-style: normal;
             font-size: 16px;
             line-height: 26px;
+            text-decoration: none;
             @media only screen and (max-width: 600px){
                 padding-right: 10px;
+            }
+            &:hover{
+                color: rgba(64, 102, 165, 1);
+                text-decoration: underline;
+            }
+            &:active{
+                color: rgba(35, 55, 89, 1);
             }
         }
 

@@ -87,6 +87,9 @@
                 height: 40px;
                 text-indent: 25px;
                 box-sizing: border-box; 
+                &:hover{
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
                 ::placeholder {
                     font-family: Arial;
                     font-weight: 400;
@@ -107,6 +110,14 @@
                     height: 22px;
                     margin-left: 92%;
                     color: rgba(106, 112, 123, 1);
+                    &:hover{
+                        box-shadow: 0px 10px 20px 0px grey;
+                    }
+                    &:active{
+                        box-shadow: 0px 10px 20px 0px grey;
+                        color: rgb(0, 247, 255);
+                        transform: translateY(2px);
+                    }
                 }
             }
 
@@ -149,7 +160,7 @@
             }
             margin-top: 33px;
             margin-bottom: 50px;
-            &__icon {
+            &__iconFA {
                 opacity: 0.5;
                 margin-left: 5px;
                 margin-right: 5px;
@@ -159,6 +170,96 @@
                 width: 28px;
                 height: 28px;
                 padding: 5px;
+                &:hover{
+                    background-color: rgba(66, 103, 178, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+                &:active{
+                    background-color: rgba(47, 74, 128, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+            }
+            &__iconINS {
+                opacity: 0.5;
+                margin-left: 5px;
+                margin-right: 5px;
+                border: solid 2px rgb(119, 119, 119);
+                color: rgb(119, 119, 119);
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                padding: 5px;
+                &:hover{
+                    background-color: rgba(193, 53, 132, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+                &:active{
+                    background-color: rgba(143, 39, 98, 1);
+                    ;
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+            }
+            &__iconTW {
+                opacity: 0.5;
+                margin-left: 5px;
+                margin-right: 5px;
+                border: solid 2px rgb(119, 119, 119);
+                color: rgb(119, 119, 119);
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                padding: 5px;
+                &:hover{
+                    background-color: rgba(29, 161, 242, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+                &:active{
+                    background-color: rgba(23, 127, 191, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+            }
+            &__iconYO {
+                opacity: 0.5;
+                margin-left: 5px;
+                margin-right: 5px;
+                border: solid 2px rgb(119, 119, 119);
+                color: rgb(119, 119, 119);
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                padding: 5px;
+                &:hover{
+                    background-color: rgba(255, 0, 0, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
+                &:active{
+                    background-color: rgba(204, 0, 0, 1);
+                    color: white;
+                    opacity: 1;
+                    border: none;
+                    box-shadow: 0px 20px 40px 0px grey;
+                }
             }
         }
     }

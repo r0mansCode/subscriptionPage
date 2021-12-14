@@ -14,10 +14,10 @@ export class Main extends Component {
                     <Validation />
                     <div className='main__content__line'></div>
                     <div className='main__content__icons'>
-                        <FaFacebookF className='main__content__icons__icon' />
-                        <AiOutlineInstagram className='main__content__icons__icon' />
-                        <AiOutlineTwitter className='main__content__icons__icon' />
-                        <BsYoutube className='main__content__icons__icon' />
+                        <FaFacebookF className='main__content__icons__iconFA' />
+                        <AiOutlineInstagram className='main__content__icons__iconINS' />
+                        <AiOutlineTwitter className='main__content__icons__iconTW' />
+                        <BsYoutube className='main__content__icons__iconYO' />
                     </div>
                 </div>
             </div>

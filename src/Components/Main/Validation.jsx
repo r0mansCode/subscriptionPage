@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import Union_2 from '../../Assets/Union_2.png';
 
 export class Validation extends Component {
 
@@ -105,6 +106,7 @@ export class Validation extends Component {
                     </div>
         } else {
             return <div>
+                        <img src={Union_2} className='main__content__cup' alt="cup" />
                         <div className='main__content__title'>Thanks for subscribing</div>
                         <div className='main__content__text'>You have successfully subscribed to our email listing. Check your email for the discount code</div>
                     </div>

@@ -2,17 +2,29 @@
     grid-column: 2 / 4;
     grid-row: 1 / 10;
     width: max-content;
-    background-color: yellow;
+    background-size: cover;
+    overflow: hidden;
+
     &__pineapple {
-        position: absolute;
-        width: auto;
-        height: 757px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: -200px;
     }   
 }
 
 @media only screen and (max-width: 600px) {
-        .background{
-        display: contents;
-        position: fixed;
+    .background {
+        display: list-item;
+        height: 667px;
+        overflow: hidden;
+        &__pineapple {
+            position: relative;
+            display: block;
+            max-width:100%; 
+            height:auto;
+            top: 0;
+        }
     }
-}
+  }
+
